@@ -1,0 +1,31 @@
+def palindromo1(st):
+
+    n = len(st)
+
+    inv = [""] * n
+
+    i = 0
+
+    j = n - 1
+
+    while i < n:
+
+        inv[i] = st[j]
+
+        i += 1
+
+        j -= 1
+
+    inv = "".join(inv)
+
+    if inv == st:
+
+        return True
+
+    else:
+
+        return False
+
+palabra = input("Escribe una palabra: ")
+
+print(palindromo1(palabra))
